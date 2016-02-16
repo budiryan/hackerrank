@@ -1,0 +1,22 @@
+02:17:20 **** Incremental Build of configuration Default for project operator_overloading ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O2 -g -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+../main.cpp: In member function 'Matrix Matrix::operator+(Matrix)':
+../main.cpp:19:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < left.a.size();i++){
+                                  ^
+../main.cpp:21:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int k = 0;k < left.a[i].size();k++){
+                                     ^
+Finished building: ../main.cpp
+ 
+Building target: operator_overloading
+Invoking: MinGW C++ Linker
+g++  -o "operator_overloading"  ./main.o   
+Finished building target: operator_overloading
+ 
+02:17:25 **** Incremental Build of configuration Default for project operator_overloading ****
+make all 
+make: Nothing to be done for `all'.

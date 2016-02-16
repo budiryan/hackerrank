@@ -1,0 +1,6 @@
+02:17:25 **** Incremental Build of configuration Default for project operator_overloading ****
+make all 
+make: Nothing to be done for `all'.
+
+02:17:26 Build Finished (took 419ms)
+
