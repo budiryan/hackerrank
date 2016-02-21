@@ -1,0 +1,32 @@
+#include <iostream>
+#include <algorithm>
+#include <bitset>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+struct node{
+	int data;
+	node * next;
+};
+
+
+
+int main(){
+	unsigned long N,S,P,Q;
+	cin >> N >> S >> P >> Q;
+	unsigned long * base = new unsigned long[N];
+	base[0] = S;
+	for(int i = 1; i < N; i++){
+		base[i] = base[i-1]*P+Q;
+	}
+	unsigned long result = 1;
+	for(int i = 0;i < 31;i++){
+		result *= 2;
+	}
+	bitset<2147483648> mybitset;
+	for(int i = 0 ; i < N; i++){
+
+	}
+	return 0;
+}

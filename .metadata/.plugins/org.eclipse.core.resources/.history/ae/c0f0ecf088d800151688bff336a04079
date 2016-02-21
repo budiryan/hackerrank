@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+#include <set>
+#include <vector>
+using namespace std;
+
+struct node{
+	int data;
+	node * next;
+};
+
+
+
+int main(){
+	int N,S,P,Q;
+	cin >> N >> S >> P >> Q;
+	int * base = new int[N];
+	base[0] = S;
+	for(int i = 1; i < N; i++){
+		base[i] = base[i-1]*P+Q;
+	}
+	cout<<*(base+1)<<endl;
+	cout<<*(base+2)<<endl;
+	vector <int> myvector(base, base + N);
+
+	cout<<myvector[1]<<endl;
+	delete [] base;
+	return 0;
+}

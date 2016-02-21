@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+#include <bitset>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+struct node{
+	int data;
+	node * next;
+};
+
+
+int main(){
+	unsigned long N,S,P,Q;
+	const unsigned long p231 = 2147483648;
+	cin >> N >> S >> P >> Q;
+	int T;
+	unsigned long * base = new unsigned long[N];
+	S = S % p231;
+	bitset<p231> * mybitset = new bitset<p231>();
+	mybitset->set(S);
+	for(int i = 1; i < N; i++){
+		T = (T * P + Q) % p231;
+		mybitset->set(T);
+	}
+	cout<<mybitset->count()<<endl;
+	return 0;
+}

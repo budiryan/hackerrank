@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+#include <bitset>
+#include <vector>
+using namespace std;
+
+struct node{
+	int data;
+	node * next;
+};
+
+
+
+int main(){
+	int N,S,P,Q;
+	cin >> N >> S >> P >> Q;
+	int * base = new int[N];
+	base[0] = S;
+	for(int i = 1; i < N; i++){
+		base[i] = base[i-1]*P+Q;
+	}
+	bitset <int> myset(base, base + N);
+
+	cout<<myset.size()<<endl;
+	return 0;
+}
